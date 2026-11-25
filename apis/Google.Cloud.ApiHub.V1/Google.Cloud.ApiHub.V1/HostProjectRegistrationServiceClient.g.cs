@@ -187,11 +187,15 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// The default HostProjectRegistrationService scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/apihub.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/apihub.readwrite</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/apihub.readonly",
+            "https://www.googleapis.com/auth/apihub.readwrite",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -266,8 +270,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -279,8 +284,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -292,8 +298,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -305,8 +312,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -335,8 +343,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -365,8 +374,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -390,8 +400,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -420,8 +431,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -450,8 +462,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource for the host project.
@@ -806,8 +819,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -822,8 +836,9 @@ namespace Google.Cloud.ApiHub.V1
         /// Create a host project registration.
         /// A Google cloud project can be registered as a host project if it is not
         /// attached as a runtime project to another host project.
-        /// A project can be registered as a host project only once. Subsequent
-        /// register calls for the same project will fail.
+        /// A project can have only one host project registration at a time.
+        /// Subsequent register calls for the same project will fail until the
+        /// existing registration is deleted.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -172,6 +172,18 @@ namespace Google.Cloud.ApiHub.V1
         }
     }
 
+    public partial class FetchAdditionalSpecContentRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::SpecName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::SpecName SpecName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::SpecName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateApiOperationRequest
     {
         /// <summary>
@@ -433,6 +445,57 @@ namespace Google.Cloud.ApiHub.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RetrieveApiViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ConfigureAndDeployServerRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class OperationConfig
+    {
+        /// <summary>
+        /// <see cref="ApiOperationName"/>-typed view over the <see cref="Operation"/> resource name property.
+        /// </summary>
+        public ApiOperationName OperationAsApiOperationName
+        {
+            get => string.IsNullOrEmpty(Operation) ? null : ApiOperationName.Parse(Operation, allowUnparsed: true);
+            set => Operation = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class HttpOperationConfig
+            {
+                /// <summary>
+                /// <see cref="SpecName"/>-typed view over the <see cref="Spec"/> resource name property.
+                /// </summary>
+                public SpecName SpecAsSpecName
+                {
+                    get => string.IsNullOrEmpty(Spec) ? null : SpecName.Parse(Spec, allowUnparsed: true);
+                    set => Spec = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

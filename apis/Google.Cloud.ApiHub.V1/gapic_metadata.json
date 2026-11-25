@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "ApiHubClient",
           "rpcs": {
+            "ConfigureAndDeployServer": {
+              "methods": [
+                "ConfigureAndDeployServer",
+                "ConfigureAndDeployServerAsync"
+              ]
+            },
             "CreateApi": {
               "methods": [
                 "CreateApi",
@@ -92,6 +98,12 @@
               "methods": [
                 "DeleteVersion",
                 "DeleteVersionAsync"
+              ]
+            },
+            "FetchAdditionalSpecContent": {
+              "methods": [
+                "FetchAdditionalSpecContent",
+                "FetchAdditionalSpecContentAsync"
               ]
             },
             "GetApi": {
@@ -190,6 +202,12 @@
                 "ListVersionsAsync"
               ]
             },
+            "RetrieveApiViews": {
+              "methods": [
+                "RetrieveApiViews",
+                "RetrieveApiViewsAsync"
+              ]
+            },
             "SearchResources": {
               "methods": [
                 "SearchResources",
@@ -236,6 +254,33 @@
               "methods": [
                 "UpdateVersion",
                 "UpdateVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ApiHubAddon": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiHubAddonClient",
+          "rpcs": {
+            "GetAddon": {
+              "methods": [
+                "GetAddon",
+                "GetAddonAsync"
+              ]
+            },
+            "ListAddons": {
+              "methods": [
+                "ListAddons",
+                "ListAddonsAsync"
+              ]
+            },
+            "ManageAddonConfig": {
+              "methods": [
+                "ManageAddonConfig",
+                "ManageAddonConfigAsync"
               ]
             }
           }
@@ -451,6 +496,12 @@
                 "ListPluginsAsync"
               ]
             },
+            "ManagePluginInstanceSourceData": {
+              "methods": [
+                "ManagePluginInstanceSourceData",
+                "ManagePluginInstanceSourceDataAsync"
+              ]
+            },
             "UpdatePluginInstance": {
               "methods": [
                 "UpdatePluginInstance",
@@ -548,6 +599,12 @@
               "methods": [
                 "LookupApiHubInstance",
                 "LookupApiHubInstanceAsync"
+              ]
+            },
+            "UpdateApiHubInstance": {
+              "methods": [
+                "UpdateApiHubInstance",
+                "UpdateApiHubInstanceAsync"
               ]
             }
           }

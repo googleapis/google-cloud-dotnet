@@ -292,7 +292,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-03T18:45:24.766538249Z",
-            "lastGeneratedCommit": "4d3b3a5470a3514b71cedd0119d14d3b7d17db7e",
+            "lastGeneratedCommit": "0b7370eb7343b2d55212f420624b832955c09594",
             "lastReleasedCommit": "4d3b3a5470a3514b71cedd0119d14d3b7d17db7e",
             "apiPaths": [
                 "google/cloud/apihub/v1"

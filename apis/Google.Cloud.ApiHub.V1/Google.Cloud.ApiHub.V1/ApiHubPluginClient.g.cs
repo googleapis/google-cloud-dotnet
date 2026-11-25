@@ -69,6 +69,7 @@ namespace Google.Cloud.ApiHub.V1
             UpdatePluginInstanceSettings = existing.UpdatePluginInstanceSettings;
             DeletePluginInstanceSettings = existing.DeletePluginInstanceSettings;
             DeletePluginInstanceOperationsSettings = existing.DeletePluginInstanceOperationsSettings.Clone();
+            ManagePluginInstanceSourceDataSettings = existing.ManagePluginInstanceSourceDataSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -361,6 +362,19 @@ namespace Google.Cloud.ApiHub.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubPluginClient.ManagePluginInstanceSourceData</c> and
+        /// <c>ApiHubPluginClient.ManagePluginInstanceSourceDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ManagePluginInstanceSourceDataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -437,11 +451,15 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// The default ApiHubPlugin scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/apihub.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/apihub.readwrite</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/apihub.readonly",
+            "https://www.googleapis.com/auth/apihub.readwrite",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -2742,6 +2760,211 @@ namespace Google.Cloud.ApiHub.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeletePluginInstanceAsync(PluginInstanceName name, st::CancellationToken cancellationToken) =>
             DeletePluginInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagePluginInstanceSourceDataResponse ManagePluginInstanceSourceData(ManagePluginInstanceSourceDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(ManagePluginInstanceSourceDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(ManagePluginInstanceSourceDataRequest request, st::CancellationToken cancellationToken) =>
+            ManagePluginInstanceSourceDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagePluginInstanceSourceDataResponse ManagePluginInstanceSourceData(string name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            ManagePluginInstanceSourceData(new ManagePluginInstanceSourceDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DataType = dataType,
+                Action = action,
+                RelativePath = gax::GaxPreconditions.CheckNotNullOrEmpty(relativePath, nameof(relativePath)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+            }, callSettings);
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(string name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            ManagePluginInstanceSourceDataAsync(new ManagePluginInstanceSourceDataRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                DataType = dataType,
+                Action = action,
+                RelativePath = gax::GaxPreconditions.CheckNotNullOrEmpty(relativePath, nameof(relativePath)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+            }, callSettings);
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(string name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, st::CancellationToken cancellationToken) =>
+            ManagePluginInstanceSourceDataAsync(name, dataType, action, relativePath, data, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ManagePluginInstanceSourceDataResponse ManagePluginInstanceSourceData(PluginInstanceName name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            ManagePluginInstanceSourceData(new ManagePluginInstanceSourceDataRequest
+            {
+                PluginInstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DataType = dataType,
+                Action = action,
+                RelativePath = gax::GaxPreconditions.CheckNotNullOrEmpty(relativePath, nameof(relativePath)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+            }, callSettings);
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(PluginInstanceName name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, gaxgrpc::CallSettings callSettings = null) =>
+            ManagePluginInstanceSourceDataAsync(new ManagePluginInstanceSourceDataRequest
+            {
+                PluginInstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                DataType = dataType,
+                Action = action,
+                RelativePath = gax::GaxPreconditions.CheckNotNullOrEmpty(relativePath, nameof(relativePath)),
+                Data = gax::GaxPreconditions.CheckNotNull(data, nameof(data)),
+            }, callSettings);
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the plugin instance for which data needs to be
+        /// managed. Format:
+        /// `projects/{project}/locations/{location}/plugins/{plugin}/instances/{instance}`
+        /// </param>
+        /// <param name="dataType">
+        /// Required. Type of data to be managed.
+        /// </param>
+        /// <param name="action">
+        /// Required. Action to be performed.
+        /// </param>
+        /// <param name="relativePath">
+        /// Required. Relative path of data being managed for a given plugin instance.
+        /// </param>
+        /// <param name="data">
+        /// Required. Data to be managed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(PluginInstanceName name, ManagePluginInstanceSourceDataRequest.Types.DataType dataType, ManagePluginInstanceSourceDataRequest.Types.Action action, string relativePath, proto::ByteString data, st::CancellationToken cancellationToken) =>
+            ManagePluginInstanceSourceDataAsync(name, dataType, action, relativePath, data, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ApiHubPlugin client wrapper implementation, for convenient use.</summary>
@@ -2777,6 +3000,8 @@ namespace Google.Cloud.ApiHub.V1
         private readonly gaxgrpc::ApiCall<UpdatePluginInstanceRequest, PluginInstance> _callUpdatePluginInstance;
 
         private readonly gaxgrpc::ApiCall<DeletePluginInstanceRequest, lro::Operation> _callDeletePluginInstance;
+
+        private readonly gaxgrpc::ApiCall<ManagePluginInstanceSourceDataRequest, ManagePluginInstanceSourceDataResponse> _callManagePluginInstanceSourceData;
 
         /// <summary>
         /// Constructs a client wrapper for the ApiHubPlugin service, with the specified gRPC client and settings.
@@ -2842,6 +3067,9 @@ namespace Google.Cloud.ApiHub.V1
             _callDeletePluginInstance = clientHelper.BuildApiCall<DeletePluginInstanceRequest, lro::Operation>("DeletePluginInstance", grpcClient.DeletePluginInstanceAsync, grpcClient.DeletePluginInstance, effectiveSettings.DeletePluginInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePluginInstance);
             Modify_DeletePluginInstanceApiCall(ref _callDeletePluginInstance);
+            _callManagePluginInstanceSourceData = clientHelper.BuildApiCall<ManagePluginInstanceSourceDataRequest, ManagePluginInstanceSourceDataResponse>("ManagePluginInstanceSourceData", grpcClient.ManagePluginInstanceSourceDataAsync, grpcClient.ManagePluginInstanceSourceData, effectiveSettings.ManagePluginInstanceSourceDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callManagePluginInstanceSourceData);
+            Modify_ManagePluginInstanceSourceDataApiCall(ref _callManagePluginInstanceSourceData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2874,6 +3102,8 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_UpdatePluginInstanceApiCall(ref gaxgrpc::ApiCall<UpdatePluginInstanceRequest, PluginInstance> call);
 
         partial void Modify_DeletePluginInstanceApiCall(ref gaxgrpc::ApiCall<DeletePluginInstanceRequest, lro::Operation> call);
+
+        partial void Modify_ManagePluginInstanceSourceDataApiCall(ref gaxgrpc::ApiCall<ManagePluginInstanceSourceDataRequest, ManagePluginInstanceSourceDataResponse> call);
 
         partial void OnConstruction(ApiHubPlugin.ApiHubPluginClient grpcClient, ApiHubPluginSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2910,6 +3140,8 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_UpdatePluginInstanceRequest(ref UpdatePluginInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePluginInstanceRequest(ref DeletePluginInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ManagePluginInstanceSourceDataRequest(ref ManagePluginInstanceSourceDataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Get an API Hub plugin.
@@ -3307,6 +3539,30 @@ namespace Google.Cloud.ApiHub.V1
         {
             Modify_DeletePluginInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeletePluginInstance.Async(request, callSettings).ConfigureAwait(false), DeletePluginInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ManagePluginInstanceSourceDataResponse ManagePluginInstanceSourceData(ManagePluginInstanceSourceDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ManagePluginInstanceSourceDataRequest(ref request, ref callSettings);
+            return _callManagePluginInstanceSourceData.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Manages data for a given plugin instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ManagePluginInstanceSourceDataResponse> ManagePluginInstanceSourceDataAsync(ManagePluginInstanceSourceDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ManagePluginInstanceSourceDataRequest(ref request, ref callSettings);
+            return _callManagePluginInstanceSourceData.Async(request, callSettings);
         }
     }
 

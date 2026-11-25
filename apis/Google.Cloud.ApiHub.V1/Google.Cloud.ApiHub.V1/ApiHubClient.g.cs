@@ -21,6 +21,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -61,6 +62,7 @@ namespace Google.Cloud.ApiHub.V1
             CreateSpecSettings = existing.CreateSpecSettings;
             GetSpecSettings = existing.GetSpecSettings;
             GetSpecContentsSettings = existing.GetSpecContentsSettings;
+            FetchAdditionalSpecContentSettings = existing.FetchAdditionalSpecContentSettings;
             ListSpecsSettings = existing.ListSpecsSettings;
             UpdateSpecSettings = existing.UpdateSpecSettings;
             DeleteSpecSettings = existing.DeleteSpecSettings;
@@ -86,6 +88,9 @@ namespace Google.Cloud.ApiHub.V1
             UpdateExternalApiSettings = existing.UpdateExternalApiSettings;
             DeleteExternalApiSettings = existing.DeleteExternalApiSettings;
             ListExternalApisSettings = existing.ListExternalApisSettings;
+            RetrieveApiViewsSettings = existing.RetrieveApiViewsSettings;
+            ConfigureAndDeployServerSettings = existing.ConfigureAndDeployServerSettings;
+            ConfigureAndDeployServerOperationsSettings = existing.ConfigureAndDeployServerOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -283,6 +288,24 @@ namespace Google.Cloud.ApiHub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSpecContentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.FetchAdditionalSpecContent</c> and <c>ApiHubClient.FetchAdditionalSpecContentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchAdditionalSpecContentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>ApiHubClient.ListSpecs</c>
@@ -651,6 +674,54 @@ namespace Google.Cloud.ApiHub.V1
         public gaxgrpc::CallSettings ListExternalApisSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.RetrieveApiViews</c> and <c>ApiHubClient.RetrieveApiViewsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RetrieveApiViewsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApiHubClient.ConfigureAndDeployServer</c> and <c>ApiHubClient.ConfigureAndDeployServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ConfigureAndDeployServerSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ApiHubClient.ConfigureAndDeployServer</c> and
+        /// <c>ApiHubClient.ConfigureAndDeployServerAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ConfigureAndDeployServerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -726,11 +797,15 @@ namespace Google.Cloud.ApiHub.V1
         /// <remarks>
         /// The default ApiHub scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/apihub.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/apihub.readwrite</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/apihub.readonly",
+            "https://www.googleapis.com/auth/apihub.readwrite",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -1288,6 +1363,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1316,6 +1392,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1344,6 +1421,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1372,6 +1450,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1413,6 +1492,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1454,6 +1534,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -3081,6 +3162,145 @@ namespace Google.Cloud.ApiHub.V1
             GetSpecContentsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(FetchAdditionalSpecContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(FetchAdditionalSpecContentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(FetchAdditionalSpecContentRequest request, st::CancellationToken cancellationToken) =>
+            FetchAdditionalSpecContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(string name, SpecContentType specContentType, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdditionalSpecContent(new FetchAdditionalSpecContentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpecContentType = specContentType,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(string name, SpecContentType specContentType, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdditionalSpecContentAsync(new FetchAdditionalSpecContentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpecContentType = specContentType,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(string name, SpecContentType specContentType, st::CancellationToken cancellationToken) =>
+            FetchAdditionalSpecContentAsync(name, specContentType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(SpecName name, SpecContentType specContentType, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdditionalSpecContent(new FetchAdditionalSpecContentRequest
+            {
+                SpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpecContentType = specContentType,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(SpecName name, SpecContentType specContentType, gaxgrpc::CallSettings callSettings = null) =>
+            FetchAdditionalSpecContentAsync(new FetchAdditionalSpecContentRequest
+            {
+                SpecName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpecContentType = specContentType,
+            }, callSettings);
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the spec whose contents need to be retrieved.
+        /// Format:
+        /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+        /// </param>
+        /// <param name="specContentType">
+        /// Optional. The type of the spec contents to be retrieved.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(SpecName name, SpecContentType specContentType, st::CancellationToken cancellationToken) =>
+            FetchAdditionalSpecContentAsync(name, specContentType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// List specs corresponding to a particular API resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3456,7 +3676,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3467,7 +3687,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3478,7 +3698,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3489,7 +3709,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3507,7 +3727,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3525,7 +3745,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3540,7 +3760,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3558,7 +3778,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3576,7 +3796,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the spec  to delete.
@@ -3646,7 +3866,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3684,7 +3904,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3722,7 +3942,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3755,7 +3975,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3793,7 +4013,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3831,7 +4051,7 @@ namespace Google.Cloud.ApiHub.V1
         /// This value should be 4-500 characters, overall resource name which
         /// will be of format
         /// `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`,
-        /// its length is limited to 700 characters, and valid characters are
+        /// its length is limited to 1000 characters, and valid characters are
         /// /[a-z][A-Z][0-9]-_/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4125,6 +4345,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4152,6 +4384,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4179,6 +4423,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4206,6 +4462,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4247,6 +4515,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4288,6 +4568,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -4318,6 +4610,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4329,6 +4623,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4340,6 +4636,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4351,6 +4649,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -4369,6 +4669,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -4387,6 +4689,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -4402,6 +4706,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -4420,6 +4726,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -4438,6 +4746,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the operation resource to delete.
@@ -5268,7 +5578,9 @@ namespace Google.Cloud.ApiHub.V1
             UpdateDeploymentAsync(deployment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5277,7 +5589,9 @@ namespace Google.Cloud.ApiHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5286,7 +5600,9 @@ namespace Google.Cloud.ApiHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5295,7 +5611,9 @@ namespace Google.Cloud.ApiHub.V1
             DeleteDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -5310,7 +5628,9 @@ namespace Google.Cloud.ApiHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -5325,7 +5645,9 @@ namespace Google.Cloud.ApiHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -5337,7 +5659,9 @@ namespace Google.Cloud.ApiHub.V1
             DeleteDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -5352,7 +5676,9 @@ namespace Google.Cloud.ApiHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -5367,7 +5693,9 @@ namespace Google.Cloud.ApiHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the deployment resource to delete.
@@ -7225,6 +7553,366 @@ namespace Google.Cloud.ApiHub.V1
             }
             return ListExternalApisAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViews(RetrieveApiViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViewsAsync(RetrieveApiViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="view">
+        /// Required. The view type to return.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViews(string parent, ApiViewType view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            RetrieveApiViewsRequest request = new RetrieveApiViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                View = view,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return RetrieveApiViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="view">
+        /// Required. The view type to return.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViewsAsync(string parent, ApiViewType view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            RetrieveApiViewsRequest request = new RetrieveApiViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                View = view,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return RetrieveApiViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="view">
+        /// Required. The view type to return.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViews(gagr::LocationName parent, ApiViewType view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            RetrieveApiViewsRequest request = new RetrieveApiViewsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                View = view,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return RetrieveApiViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// Format: `projects/{project}/locations/{location}`.
+        /// </param>
+        /// <param name="view">
+        /// Required. The view type to return.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApiView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViewsAsync(gagr::LocationName parent, ApiViewType view, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            RetrieveApiViewsRequest request = new RetrieveApiViewsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                View = view,
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return RetrieveApiViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata> ConfigureAndDeployServer(ConfigureAndDeployServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(ConfigureAndDeployServerRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(ConfigureAndDeployServerRequest request, st::CancellationToken cancellationToken) =>
+            ConfigureAndDeployServerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ConfigureAndDeployServer</c>.</summary>
+        public virtual lro::OperationsClient ConfigureAndDeployServerOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ConfigureAndDeployServer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata> PollOnceConfigureAndDeployServer(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ConfigureAndDeployServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ConfigureAndDeployServer</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> PollOnceConfigureAndDeployServerAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ConfigureAndDeployServerOperationsClient, callSettings);
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata> ConfigureAndDeployServer(string parent, McpServerConfig mcpServerConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ConfigureAndDeployServer(new ConfigureAndDeployServerRequest
+            {
+                McpServerConfig = mcpServerConfig,
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(string parent, McpServerConfig mcpServerConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ConfigureAndDeployServerAsync(new ConfigureAndDeployServerRequest
+            {
+                McpServerConfig = mcpServerConfig,
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(string parent, McpServerConfig mcpServerConfig, st::CancellationToken cancellationToken) =>
+            ConfigureAndDeployServerAsync(parent, mcpServerConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata> ConfigureAndDeployServer(gagr::LocationName parent, McpServerConfig mcpServerConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ConfigureAndDeployServer(new ConfigureAndDeployServerRequest
+            {
+                McpServerConfig = mcpServerConfig,
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(gagr::LocationName parent, McpServerConfig mcpServerConfig, gaxgrpc::CallSettings callSettings = null) =>
+            ConfigureAndDeployServerAsync(new ConfigureAndDeployServerRequest
+            {
+                McpServerConfig = mcpServerConfig,
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="mcpServerConfig">
+        /// MCP (Model Context Protocol) server configuration.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(gagr::LocationName parent, McpServerConfig mcpServerConfig, st::CancellationToken cancellationToken) =>
+            ConfigureAndDeployServerAsync(parent, mcpServerConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ApiHub client wrapper implementation, for convenient use.</summary>
@@ -7258,6 +7946,8 @@ namespace Google.Cloud.ApiHub.V1
         private readonly gaxgrpc::ApiCall<GetSpecRequest, Spec> _callGetSpec;
 
         private readonly gaxgrpc::ApiCall<GetSpecContentsRequest, SpecContents> _callGetSpecContents;
+
+        private readonly gaxgrpc::ApiCall<FetchAdditionalSpecContentRequest, FetchAdditionalSpecContentResponse> _callFetchAdditionalSpecContent;
 
         private readonly gaxgrpc::ApiCall<ListSpecsRequest, ListSpecsResponse> _callListSpecs;
 
@@ -7309,6 +7999,10 @@ namespace Google.Cloud.ApiHub.V1
 
         private readonly gaxgrpc::ApiCall<ListExternalApisRequest, ListExternalApisResponse> _callListExternalApis;
 
+        private readonly gaxgrpc::ApiCall<RetrieveApiViewsRequest, RetrieveApiViewsResponse> _callRetrieveApiViews;
+
+        private readonly gaxgrpc::ApiCall<ConfigureAndDeployServerRequest, lro::Operation> _callConfigureAndDeployServer;
+
         /// <summary>
         /// Constructs a client wrapper for the ApiHub service, with the specified gRPC client and settings.
         /// </summary>
@@ -7324,6 +8018,7 @@ namespace Google.Cloud.ApiHub.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            ConfigureAndDeployServerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ConfigureAndDeployServerOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callCreateApi = clientHelper.BuildApiCall<CreateApiRequest, Api>("CreateApi", grpcClient.CreateApiAsync, grpcClient.CreateApi, effectiveSettings.CreateApiSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateApi);
@@ -7364,6 +8059,9 @@ namespace Google.Cloud.ApiHub.V1
             _callGetSpecContents = clientHelper.BuildApiCall<GetSpecContentsRequest, SpecContents>("GetSpecContents", grpcClient.GetSpecContentsAsync, grpcClient.GetSpecContents, effectiveSettings.GetSpecContentsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpecContents);
             Modify_GetSpecContentsApiCall(ref _callGetSpecContents);
+            _callFetchAdditionalSpecContent = clientHelper.BuildApiCall<FetchAdditionalSpecContentRequest, FetchAdditionalSpecContentResponse>("FetchAdditionalSpecContent", grpcClient.FetchAdditionalSpecContentAsync, grpcClient.FetchAdditionalSpecContent, effectiveSettings.FetchAdditionalSpecContentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchAdditionalSpecContent);
+            Modify_FetchAdditionalSpecContentApiCall(ref _callFetchAdditionalSpecContent);
             _callListSpecs = clientHelper.BuildApiCall<ListSpecsRequest, ListSpecsResponse>("ListSpecs", grpcClient.ListSpecsAsync, grpcClient.ListSpecs, effectiveSettings.ListSpecsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSpecs);
             Modify_ListSpecsApiCall(ref _callListSpecs);
@@ -7439,6 +8137,12 @@ namespace Google.Cloud.ApiHub.V1
             _callListExternalApis = clientHelper.BuildApiCall<ListExternalApisRequest, ListExternalApisResponse>("ListExternalApis", grpcClient.ListExternalApisAsync, grpcClient.ListExternalApis, effectiveSettings.ListExternalApisSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListExternalApis);
             Modify_ListExternalApisApiCall(ref _callListExternalApis);
+            _callRetrieveApiViews = clientHelper.BuildApiCall<RetrieveApiViewsRequest, RetrieveApiViewsResponse>("RetrieveApiViews", grpcClient.RetrieveApiViewsAsync, grpcClient.RetrieveApiViews, effectiveSettings.RetrieveApiViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRetrieveApiViews);
+            Modify_RetrieveApiViewsApiCall(ref _callRetrieveApiViews);
+            _callConfigureAndDeployServer = clientHelper.BuildApiCall<ConfigureAndDeployServerRequest, lro::Operation>("ConfigureAndDeployServer", grpcClient.ConfigureAndDeployServerAsync, grpcClient.ConfigureAndDeployServer, effectiveSettings.ConfigureAndDeployServerSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callConfigureAndDeployServer);
+            Modify_ConfigureAndDeployServerApiCall(ref _callConfigureAndDeployServer);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -7469,6 +8173,8 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_GetSpecApiCall(ref gaxgrpc::ApiCall<GetSpecRequest, Spec> call);
 
         partial void Modify_GetSpecContentsApiCall(ref gaxgrpc::ApiCall<GetSpecContentsRequest, SpecContents> call);
+
+        partial void Modify_FetchAdditionalSpecContentApiCall(ref gaxgrpc::ApiCall<FetchAdditionalSpecContentRequest, FetchAdditionalSpecContentResponse> call);
 
         partial void Modify_ListSpecsApiCall(ref gaxgrpc::ApiCall<ListSpecsRequest, ListSpecsResponse> call);
 
@@ -7520,6 +8226,10 @@ namespace Google.Cloud.ApiHub.V1
 
         partial void Modify_ListExternalApisApiCall(ref gaxgrpc::ApiCall<ListExternalApisRequest, ListExternalApisResponse> call);
 
+        partial void Modify_RetrieveApiViewsApiCall(ref gaxgrpc::ApiCall<RetrieveApiViewsRequest, RetrieveApiViewsResponse> call);
+
+        partial void Modify_ConfigureAndDeployServerApiCall(ref gaxgrpc::ApiCall<ConfigureAndDeployServerRequest, lro::Operation> call);
+
         partial void OnConstruction(ApiHub.ApiHubClient grpcClient, ApiHubSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ApiHub client</summary>
@@ -7553,6 +8263,8 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_GetSpecRequest(ref GetSpecRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSpecContentsRequest(ref GetSpecContentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchAdditionalSpecContentRequest(ref FetchAdditionalSpecContentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSpecsRequest(ref ListSpecsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7603,6 +8315,10 @@ namespace Google.Cloud.ApiHub.V1
         partial void Modify_DeleteExternalApiRequest(ref DeleteExternalApiRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListExternalApisRequest(ref ListExternalApisRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RetrieveApiViewsRequest(ref RetrieveApiViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ConfigureAndDeployServerRequest(ref ConfigureAndDeployServerRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Create an API resource in the API hub.
@@ -7692,6 +8408,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -7723,6 +8440,7 @@ namespace Google.Cloud.ApiHub.V1
         /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
         /// * [api_style][google.cloud.apihub.v1.Api.api_style]
         /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+        /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -8039,6 +8757,30 @@ namespace Google.Cloud.ApiHub.V1
         }
 
         /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(FetchAdditionalSpecContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAdditionalSpecContentRequest(ref request, ref callSettings);
+            return _callFetchAdditionalSpecContent.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetch additional spec content.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(FetchAdditionalSpecContentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchAdditionalSpecContentRequest(ref request, ref callSettings);
+            return _callFetchAdditionalSpecContent.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// List specs corresponding to a particular API resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -8131,7 +8873,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8145,7 +8887,7 @@ namespace Google.Cloud.ApiHub.V1
         /// <summary>
         /// Delete a spec.
         /// Deleting a spec will also delete the associated operations from the
-        /// version.
+        /// version and remove any links between the spec and deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8243,6 +8985,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -8273,6 +9027,18 @@ namespace Google.Cloud.ApiHub.V1
         /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
         /// * [details.deprecated][ApiOperation.details.deprecated]
         /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+        /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+        /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+        /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+        /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+        /// * [details.input_schema][ApiOperation.details.input_schema]
+        /// * [details.output_schema][ApiOperation.details.output_schema]
+        /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+        /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+        /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+        /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+        /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+        /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
         /// 
         /// The
         /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -8296,6 +9062,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8310,6 +9078,8 @@ namespace Google.Cloud.ApiHub.V1
         /// Delete an operation in an API version and we can delete only the
         /// operations created via create API. If the operation was created by parsing
         /// the spec, then it can be deleted by editing or deleting the spec.
+        /// Deleting an operation will also remove any links between the operation and
+        /// deployments.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8485,7 +9255,9 @@ namespace Google.Cloud.ApiHub.V1
         }
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8497,7 +9269,9 @@ namespace Google.Cloud.ApiHub.V1
         }
 
         /// <summary>
-        /// Delete a deployment resource in the API hub.
+        /// Deletes a deployment resource in the API hub. A deployment can only be
+        /// deleted after its links to any versions, specs, and API operations have
+        /// been removed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8857,6 +9631,65 @@ namespace Google.Cloud.ApiHub.V1
             Modify_ListExternalApisRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListExternalApisRequest, ListExternalApisResponse, ExternalApi>(_callListExternalApis, request, callSettings);
         }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ApiView"/> resources.</returns>
+        public override gax::PagedEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViews(RetrieveApiViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveApiViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<RetrieveApiViewsRequest, RetrieveApiViewsResponse, ApiView>(_callRetrieveApiViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve API views.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ApiView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RetrieveApiViewsResponse, ApiView> RetrieveApiViewsAsync(RetrieveApiViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RetrieveApiViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<RetrieveApiViewsRequest, RetrieveApiViewsResponse, ApiView>(_callRetrieveApiViews, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>ConfigureAndDeployServer</c>.</summary>
+        public override lro::OperationsClient ConfigureAndDeployServerOperationsClient { get; }
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata> ConfigureAndDeployServer(ConfigureAndDeployServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ConfigureAndDeployServerRequest(ref request, ref callSettings);
+            return new lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>(_callConfigureAndDeployServer.Sync(request, callSettings), ConfigureAndDeployServerOperationsClient);
+        }
+
+        /// <summary>
+        /// Configures and deploys a given server config for given target. Currently
+        /// this API supports only deploying MCP server in Apigee X. For mcp server
+        /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+        /// method will try to overwrite it by creating new revision i.e. all existing
+        /// tools will be removed and new set of tools will be deployed.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>> ConfigureAndDeployServerAsync(ConfigureAndDeployServerRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ConfigureAndDeployServerRequest(ref request, ref callSettings);
+            return new lro::Operation<ConfigureAndDeployServerResponse, OperationMetadata>(await _callConfigureAndDeployServer.Async(request, callSettings).ConfigureAwait(false), ConfigureAndDeployServerOperationsClient);
+        }
     }
 
     public partial class ListApisRequest : gaxgrpc::IPageRequest
@@ -8888,6 +9721,10 @@ namespace Google.Cloud.ApiHub.V1
     }
 
     public partial class ListExternalApisRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class RetrieveApiViewsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -8953,6 +9790,28 @@ namespace Google.Cloud.ApiHub.V1
         public scg::IEnumerator<ExternalApi> GetEnumerator() => ExternalApis.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class RetrieveApiViewsResponse : gaxgrpc::IPageResponse<ApiView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ApiView> GetEnumerator() => ApiViews.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class ApiHub
+    {
+        public partial class ApiHubClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class ApiHub

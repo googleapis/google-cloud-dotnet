@@ -20,6 +20,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
+    using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Threading.Tasks;
@@ -1532,6 +1533,99 @@ namespace GoogleCSharpSnippets
             gcav::SpecName name = gcav::SpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
             // Make the request
             gcav::SpecContents response = await apiHubClient.GetSpecContentsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContent</summary>
+        public void FetchAdditionalSpecContentRequestObject()
+        {
+            // Snippet: FetchAdditionalSpecContent(FetchAdditionalSpecContentRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::FetchAdditionalSpecContentRequest request = new gcav::FetchAdditionalSpecContentRequest
+            {
+                SpecName = gcav::SpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                SpecContentType = gcav::SpecContentType.Unspecified,
+            };
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = apiHubClient.FetchAdditionalSpecContent(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContentAsync</summary>
+        public async Task FetchAdditionalSpecContentRequestObjectAsync()
+        {
+            // Snippet: FetchAdditionalSpecContentAsync(FetchAdditionalSpecContentRequest, CallSettings)
+            // Additional: FetchAdditionalSpecContentAsync(FetchAdditionalSpecContentRequest, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::FetchAdditionalSpecContentRequest request = new gcav::FetchAdditionalSpecContentRequest
+            {
+                SpecName = gcav::SpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]"),
+                SpecContentType = gcav::SpecContentType.Unspecified,
+            };
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = await apiHubClient.FetchAdditionalSpecContentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContent</summary>
+        public void FetchAdditionalSpecContent()
+        {
+            // Snippet: FetchAdditionalSpecContent(string, SpecContentType, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
+            gcav::SpecContentType specContentType = gcav::SpecContentType.Unspecified;
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = apiHubClient.FetchAdditionalSpecContent(name, specContentType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContentAsync</summary>
+        public async Task FetchAdditionalSpecContentAsync()
+        {
+            // Snippet: FetchAdditionalSpecContentAsync(string, SpecContentType, CallSettings)
+            // Additional: FetchAdditionalSpecContentAsync(string, SpecContentType, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/apis/[API]/versions/[VERSION]/specs/[SPEC]";
+            gcav::SpecContentType specContentType = gcav::SpecContentType.Unspecified;
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = await apiHubClient.FetchAdditionalSpecContentAsync(name, specContentType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContent</summary>
+        public void FetchAdditionalSpecContentResourceNames()
+        {
+            // Snippet: FetchAdditionalSpecContent(SpecName, SpecContentType, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::SpecName name = gcav::SpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::SpecContentType specContentType = gcav::SpecContentType.Unspecified;
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = apiHubClient.FetchAdditionalSpecContent(name, specContentType);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchAdditionalSpecContentAsync</summary>
+        public async Task FetchAdditionalSpecContentResourceNamesAsync()
+        {
+            // Snippet: FetchAdditionalSpecContentAsync(SpecName, SpecContentType, CallSettings)
+            // Additional: FetchAdditionalSpecContentAsync(SpecName, SpecContentType, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::SpecName name = gcav::SpecName.FromProjectLocationApiVersionSpec("[PROJECT]", "[LOCATION]", "[API]", "[VERSION]", "[SPEC]");
+            gcav::SpecContentType specContentType = gcav::SpecContentType.Unspecified;
+            // Make the request
+            gcav::FetchAdditionalSpecContentResponse response = await apiHubClient.FetchAdditionalSpecContentAsync(name, specContentType);
             // End snippet
         }
 
@@ -4790,6 +4884,479 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViews</summary>
+        public void RetrieveApiViewsRequestObject()
+        {
+            // Snippet: RetrieveApiViews(RetrieveApiViewsRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::RetrieveApiViewsRequest request = new gcav::RetrieveApiViewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                View = gcav::ApiViewType.Unspecified,
+            };
+            // Make the request
+            PagedEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViewsAsync</summary>
+        public async Task RetrieveApiViewsRequestObjectAsync()
+        {
+            // Snippet: RetrieveApiViewsAsync(RetrieveApiViewsRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::RetrieveApiViewsRequest request = new gcav::RetrieveApiViewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                View = gcav::ApiViewType.Unspecified,
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViews</summary>
+        public void RetrieveApiViews()
+        {
+            // Snippet: RetrieveApiViews(string, ApiViewType, string, int?, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcav::ApiViewType view = gcav::ApiViewType.Unspecified;
+            // Make the request
+            PagedEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViews(parent, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViewsAsync</summary>
+        public async Task RetrieveApiViewsAsync()
+        {
+            // Snippet: RetrieveApiViewsAsync(string, ApiViewType, string, int?, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcav::ApiViewType view = gcav::ApiViewType.Unspecified;
+            // Make the request
+            PagedAsyncEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViewsAsync(parent, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViews</summary>
+        public void RetrieveApiViewsResourceNames()
+        {
+            // Snippet: RetrieveApiViews(LocationName, ApiViewType, string, int?, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::ApiViewType view = gcav::ApiViewType.Unspecified;
+            // Make the request
+            PagedEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViews(parent, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for RetrieveApiViewsAsync</summary>
+        public async Task RetrieveApiViewsResourceNamesAsync()
+        {
+            // Snippet: RetrieveApiViewsAsync(LocationName, ApiViewType, string, int?, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::ApiViewType view = gcav::ApiViewType.Unspecified;
+            // Make the request
+            PagedAsyncEnumerable<gcav::RetrieveApiViewsResponse, gcav::ApiView> response = apiHubClient.RetrieveApiViewsAsync(parent, view);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcav::ApiView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcav::RetrieveApiViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcav::ApiView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcav::ApiView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcav::ApiView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServer</summary>
+        public void ConfigureAndDeployServerRequestObject()
+        {
+            // Snippet: ConfigureAndDeployServer(ConfigureAndDeployServerRequest, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            gcav::ConfigureAndDeployServerRequest request = new gcav::ConfigureAndDeployServerRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                McpServerConfig = new gcav::McpServerConfig(),
+            };
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = apiHubClient.ConfigureAndDeployServer(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = apiHubClient.PollOnceConfigureAndDeployServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServerAsync</summary>
+        public async Task ConfigureAndDeployServerRequestObjectAsync()
+        {
+            // Snippet: ConfigureAndDeployServerAsync(ConfigureAndDeployServerRequest, CallSettings)
+            // Additional: ConfigureAndDeployServerAsync(ConfigureAndDeployServerRequest, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            gcav::ConfigureAndDeployServerRequest request = new gcav::ConfigureAndDeployServerRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                McpServerConfig = new gcav::McpServerConfig(),
+            };
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = await apiHubClient.ConfigureAndDeployServerAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = await apiHubClient.PollOnceConfigureAndDeployServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServer</summary>
+        public void ConfigureAndDeployServer()
+        {
+            // Snippet: ConfigureAndDeployServer(string, McpServerConfig, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcav::McpServerConfig mcpServerConfig = new gcav::McpServerConfig();
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = apiHubClient.ConfigureAndDeployServer(parent, mcpServerConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = apiHubClient.PollOnceConfigureAndDeployServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServerAsync</summary>
+        public async Task ConfigureAndDeployServerAsync()
+        {
+            // Snippet: ConfigureAndDeployServerAsync(string, McpServerConfig, CallSettings)
+            // Additional: ConfigureAndDeployServerAsync(string, McpServerConfig, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            gcav::McpServerConfig mcpServerConfig = new gcav::McpServerConfig();
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = await apiHubClient.ConfigureAndDeployServerAsync(parent, mcpServerConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = await apiHubClient.PollOnceConfigureAndDeployServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServer</summary>
+        public void ConfigureAndDeployServerResourceNames()
+        {
+            // Snippet: ConfigureAndDeployServer(LocationName, McpServerConfig, CallSettings)
+            // Create client
+            gcav::ApiHubClient apiHubClient = gcav::ApiHubClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::McpServerConfig mcpServerConfig = new gcav::McpServerConfig();
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = apiHubClient.ConfigureAndDeployServer(parent, mcpServerConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = apiHubClient.PollOnceConfigureAndDeployServer(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureAndDeployServerAsync</summary>
+        public async Task ConfigureAndDeployServerResourceNamesAsync()
+        {
+            // Snippet: ConfigureAndDeployServerAsync(LocationName, McpServerConfig, CallSettings)
+            // Additional: ConfigureAndDeployServerAsync(LocationName, McpServerConfig, CancellationToken)
+            // Create client
+            gcav::ApiHubClient apiHubClient = await gcav::ApiHubClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            gcav::McpServerConfig mcpServerConfig = new gcav::McpServerConfig();
+            // Make the request
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> response = await apiHubClient.ConfigureAndDeployServerAsync(parent, mcpServerConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcav::ConfigureAndDeployServerResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcav::ConfigureAndDeployServerResponse, gcav::OperationMetadata> retrievedResponse = await apiHubClient.PollOnceConfigureAndDeployServerAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcav::ConfigureAndDeployServerResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

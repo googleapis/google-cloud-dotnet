@@ -3,7 +3,7 @@
 //     source: google/cloud/apihub/v1/apihub_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -104,6 +104,10 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.SpecContents> __Marshaller_google_cloud_apihub_v1_SpecContents = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.SpecContents.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest> __Marshaller_google_cloud_apihub_v1_FetchAdditionalSpecContentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse> __Marshaller_google_cloud_apihub_v1_FetchAdditionalSpecContentResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListSpecsRequest> __Marshaller_google_cloud_apihub_v1_ListSpecsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListSpecsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListSpecsResponse> __Marshaller_google_cloud_apihub_v1_ListSpecsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListSpecsResponse.Parser));
@@ -175,6 +179,14 @@ namespace Google.Cloud.ApiHub.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListExternalApisRequest> __Marshaller_google_cloud_apihub_v1_ListExternalApisRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListExternalApisRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ListExternalApisResponse> __Marshaller_google_cloud_apihub_v1_ListExternalApisResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ListExternalApisResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest> __Marshaller_google_cloud_apihub_v1_RetrieveApiViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse> __Marshaller_google_cloud_apihub_v1_RetrieveApiViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest> __Marshaller_google_cloud_apihub_v1_ConfigureAndDeployServerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.CreateApiRequest, global::Google.Cloud.ApiHub.V1.Api> __Method_CreateApi = new grpc::Method<global::Google.Cloud.ApiHub.V1.CreateApiRequest, global::Google.Cloud.ApiHub.V1.Api>(
@@ -279,6 +291,14 @@ namespace Google.Cloud.ApiHub.V1 {
         "GetSpecContents",
         __Marshaller_google_cloud_apihub_v1_GetSpecContentsRequest,
         __Marshaller_google_cloud_apihub_v1_SpecContents);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest, global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse> __Method_FetchAdditionalSpecContent = new grpc::Method<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest, global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchAdditionalSpecContent",
+        __Marshaller_google_cloud_apihub_v1_FetchAdditionalSpecContentRequest,
+        __Marshaller_google_cloud_apihub_v1_FetchAdditionalSpecContentResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.ListSpecsRequest, global::Google.Cloud.ApiHub.V1.ListSpecsResponse> __Method_ListSpecs = new grpc::Method<global::Google.Cloud.ApiHub.V1.ListSpecsRequest, global::Google.Cloud.ApiHub.V1.ListSpecsResponse>(
@@ -480,6 +500,22 @@ namespace Google.Cloud.ApiHub.V1 {
         __Marshaller_google_cloud_apihub_v1_ListExternalApisRequest,
         __Marshaller_google_cloud_apihub_v1_ListExternalApisResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest, global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse> __Method_RetrieveApiViews = new grpc::Method<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest, global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetrieveApiViews",
+        __Marshaller_google_cloud_apihub_v1_RetrieveApiViewsRequest,
+        __Marshaller_google_cloud_apihub_v1_RetrieveApiViewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest, global::Google.LongRunning.Operation> __Method_ConfigureAndDeployServer = new grpc::Method<global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ConfigureAndDeployServer",
+        __Marshaller_google_cloud_apihub_v1_ConfigureAndDeployServerRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -541,6 +577,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
       /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+      /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -708,6 +745,18 @@ namespace Google.Cloud.ApiHub.V1 {
       }
 
       /// <summary>
+      /// Fetch additional spec content.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse> FetchAdditionalSpecContent(global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// List specs corresponding to a particular API resource.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -755,7 +804,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <summary>
       /// Delete a spec.
       /// Deleting a spec will also delete the associated operations from the
-      /// version.
+      /// version and remove any links between the spec and deployments.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -815,6 +864,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
       /// * [details.deprecated][ApiOperation.details.deprecated]
       /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+      /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+      /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+      /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+      /// * [details.input_schema][ApiOperation.details.input_schema]
+      /// * [details.output_schema][ApiOperation.details.output_schema]
+      /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+      /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+      /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+      /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+      /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+      /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -838,6 +899,8 @@ namespace Google.Cloud.ApiHub.V1 {
       /// Delete an operation in an API version and we can delete only the
       /// operations created via create API. If the operation was created by parsing
       /// the spec, then it can be deleted by editing or deleting the spec.
+      /// Deleting an operation will also remove any links between the operation and
+      /// deployments.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -931,7 +994,9 @@ namespace Google.Cloud.ApiHub.V1 {
       }
 
       /// <summary>
-      /// Delete a deployment resource in the API hub.
+      /// Deletes a deployment resource in the API hub. A deployment can only be
+      /// deleted after its links to any versions, specs, and API operations have
+      /// been removed.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1113,6 +1178,34 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.ListExternalApisResponse> ListExternalApis(global::Google.Cloud.ApiHub.V1.ListExternalApisRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve API views.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse> RetrieveApiViews(global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Configures and deploys a given server config for given target. Currently
+      /// this API supports only deploying MCP server in Apigee X. For mcp server
+      /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+      /// method will try to overwrite it by creating new revision i.e. all existing
+      /// tools will be removed and new set of tools will be deployed.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ConfigureAndDeployServer(global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1308,6 +1401,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
       /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+      /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1340,6 +1434,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
       /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+      /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1370,6 +1465,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
       /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+      /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -1402,6 +1498,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [maturity_level][google.cloud.apihub.v1.Api.maturity_level]
       /// * [api_style][google.cloud.apihub.v1.Api.api_style]
       /// * [attributes][google.cloud.apihub.v1.Api.attributes]
+      /// * [fingerprint][google.cloud.apihub.v1.Api.fingerprint]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiRequest.update_mask]
@@ -2015,6 +2112,54 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSpecContents, null, options, request);
       }
       /// <summary>
+      /// Fetch additional spec content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAdditionalSpecContent(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch additional spec content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse FetchAdditionalSpecContent(global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchAdditionalSpecContent, null, options, request);
+      }
+      /// <summary>
+      /// Fetch additional spec content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchAdditionalSpecContentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch additional spec content.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse> FetchAdditionalSpecContentAsync(global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchAdditionalSpecContent, null, options, request);
+      }
+      /// <summary>
       /// List specs corresponding to a particular API resource.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2197,7 +2342,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <summary>
       /// Delete a spec.
       /// Deleting a spec will also delete the associated operations from the
-      /// version.
+      /// version and remove any links between the spec and deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2212,7 +2357,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <summary>
       /// Delete a spec.
       /// Deleting a spec will also delete the associated operations from the
-      /// version.
+      /// version and remove any links between the spec and deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2225,7 +2370,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <summary>
       /// Delete a spec.
       /// Deleting a spec will also delete the associated operations from the
-      /// version.
+      /// version and remove any links between the spec and deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2240,7 +2385,7 @@ namespace Google.Cloud.ApiHub.V1 {
       /// <summary>
       /// Delete a spec.
       /// Deleting a spec will also delete the associated operations from the
-      /// version.
+      /// version and remove any links between the spec and deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2413,6 +2558,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
       /// * [details.deprecated][ApiOperation.details.deprecated]
       /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+      /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+      /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+      /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+      /// * [details.input_schema][ApiOperation.details.input_schema]
+      /// * [details.output_schema][ApiOperation.details.output_schema]
+      /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+      /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+      /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+      /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+      /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+      /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -2444,6 +2601,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
       /// * [details.deprecated][ApiOperation.details.deprecated]
       /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+      /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+      /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+      /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+      /// * [details.input_schema][ApiOperation.details.input_schema]
+      /// * [details.output_schema][ApiOperation.details.output_schema]
+      /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+      /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+      /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+      /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+      /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+      /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -2473,6 +2642,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
       /// * [details.deprecated][ApiOperation.details.deprecated]
       /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+      /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+      /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+      /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+      /// * [details.input_schema][ApiOperation.details.input_schema]
+      /// * [details.output_schema][ApiOperation.details.output_schema]
+      /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+      /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+      /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+      /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+      /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+      /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -2504,6 +2685,18 @@ namespace Google.Cloud.ApiHub.V1 {
       /// * [details.http_operation.method][ApiOperation.details.http_operation.method]
       /// * [details.deprecated][ApiOperation.details.deprecated]
       /// * [attributes][google.cloud.apihub.v1.ApiOperation.attributes]
+      /// * [details.mcp_tool.title][ApiOperation.details.mcp_tool.title]
+      /// * [details.mcp_tool.description][ApiOperation.details.mcp_tool.description]
+      /// * [details.mcp_tool.input_schema][ApiOperation.details.mcp_tool.input_schema]
+      /// * [details.mcp_tool.output_schema][ApiOperation.details.mcp_tool.output_schema]
+      /// * [details.input_schema][ApiOperation.details.input_schema]
+      /// * [details.output_schema][ApiOperation.details.output_schema]
+      /// * [details.mcp_tool.annotations.title][ApiOperation.details.mcp_tool.annotations.title]
+      /// * [details.mcp_tool.annotations.read_only_hint][ApiOperation.details.mcp_tool.annotations.read_only_hint]
+      /// * [details.mcp_tool.annotations.destructive_hint][ApiOperation.details.mcp_tool.annotations.destructive_hint]
+      /// * [details.mcp_tool.annotations.idempotent_hint][ApiOperation.details.mcp_tool.annotations.idempotent_hint]
+      /// * [details.mcp_tool.annotations.open_world_hint][ApiOperation.details.mcp_tool.annotations.open_world_hint]
+      /// * [details.mcp_tool.annotations.additional_hints][ApiOperation.details.mcp_tool.annotations.additional_hints]
       ///
       /// The
       /// [update_mask][google.cloud.apihub.v1.UpdateApiOperationRequest.update_mask]
@@ -2526,6 +2719,8 @@ namespace Google.Cloud.ApiHub.V1 {
       /// Delete an operation in an API version and we can delete only the
       /// operations created via create API. If the operation was created by parsing
       /// the spec, then it can be deleted by editing or deleting the spec.
+      /// Deleting an operation will also remove any links between the operation and
+      /// deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2541,6 +2736,8 @@ namespace Google.Cloud.ApiHub.V1 {
       /// Delete an operation in an API version and we can delete only the
       /// operations created via create API. If the operation was created by parsing
       /// the spec, then it can be deleted by editing or deleting the spec.
+      /// Deleting an operation will also remove any links between the operation and
+      /// deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2554,6 +2751,8 @@ namespace Google.Cloud.ApiHub.V1 {
       /// Delete an operation in an API version and we can delete only the
       /// operations created via create API. If the operation was created by parsing
       /// the spec, then it can be deleted by editing or deleting the spec.
+      /// Deleting an operation will also remove any links between the operation and
+      /// deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2569,6 +2768,8 @@ namespace Google.Cloud.ApiHub.V1 {
       /// Delete an operation in an API version and we can delete only the
       /// operations created via create API. If the operation was created by parsing
       /// the spec, then it can be deleted by editing or deleting the spec.
+      /// Deleting an operation will also remove any links between the operation and
+      /// deployments.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2907,7 +3108,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDeployment, null, options, request);
       }
       /// <summary>
-      /// Delete a deployment resource in the API hub.
+      /// Deletes a deployment resource in the API hub. A deployment can only be
+      /// deleted after its links to any versions, specs, and API operations have
+      /// been removed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2920,7 +3123,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return DeleteDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a deployment resource in the API hub.
+      /// Deletes a deployment resource in the API hub. A deployment can only be
+      /// deleted after its links to any versions, specs, and API operations have
+      /// been removed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2931,7 +3136,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteDeployment, null, options, request);
       }
       /// <summary>
-      /// Delete a deployment resource in the API hub.
+      /// Deletes a deployment resource in the API hub. A deployment can only be
+      /// deleted after its links to any versions, specs, and API operations have
+      /// been removed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2944,7 +3151,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return DeleteDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Delete a deployment resource in the API hub.
+      /// Deletes a deployment resource in the API hub. A deployment can only be
+      /// deleted after its links to any versions, specs, and API operations have
+      /// been removed.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3654,6 +3863,118 @@ namespace Google.Cloud.ApiHub.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListExternalApis, null, options, request);
       }
+      /// <summary>
+      /// Retrieve API views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse RetrieveApiViews(global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveApiViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve API views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse RetrieveApiViews(global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetrieveApiViews, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve API views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse> RetrieveApiViewsAsync(global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetrieveApiViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve API views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse> RetrieveApiViewsAsync(global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetrieveApiViews, null, options, request);
+      }
+      /// <summary>
+      /// Configures and deploys a given server config for given target. Currently
+      /// this API supports only deploying MCP server in Apigee X. For mcp server
+      /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+      /// method will try to overwrite it by creating new revision i.e. all existing
+      /// tools will be removed and new set of tools will be deployed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ConfigureAndDeployServer(global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConfigureAndDeployServer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Configures and deploys a given server config for given target. Currently
+      /// this API supports only deploying MCP server in Apigee X. For mcp server
+      /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+      /// method will try to overwrite it by creating new revision i.e. all existing
+      /// tools will be removed and new set of tools will be deployed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ConfigureAndDeployServer(global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ConfigureAndDeployServer, null, options, request);
+      }
+      /// <summary>
+      /// Configures and deploys a given server config for given target. Currently
+      /// this API supports only deploying MCP server in Apigee X. For mcp server
+      /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+      /// method will try to overwrite it by creating new revision i.e. all existing
+      /// tools will be removed and new set of tools will be deployed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureAndDeployServerAsync(global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConfigureAndDeployServerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Configures and deploys a given server config for given target. Currently
+      /// this API supports only deploying MCP server in Apigee X. For mcp server
+      /// deployment in apigee X, if there is already a mcp proxy deployed, then this
+      /// method will try to overwrite it by creating new revision i.e. all existing
+      /// tools will be removed and new set of tools will be deployed.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ConfigureAndDeployServerAsync(global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ConfigureAndDeployServer, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ApiHubClient NewInstance(ClientBaseConfiguration configuration)
@@ -3681,6 +4002,7 @@ namespace Google.Cloud.ApiHub.V1 {
           .AddMethod(__Method_CreateSpec, serviceImpl.CreateSpec)
           .AddMethod(__Method_GetSpec, serviceImpl.GetSpec)
           .AddMethod(__Method_GetSpecContents, serviceImpl.GetSpecContents)
+          .AddMethod(__Method_FetchAdditionalSpecContent, serviceImpl.FetchAdditionalSpecContent)
           .AddMethod(__Method_ListSpecs, serviceImpl.ListSpecs)
           .AddMethod(__Method_UpdateSpec, serviceImpl.UpdateSpec)
           .AddMethod(__Method_DeleteSpec, serviceImpl.DeleteSpec)
@@ -3705,7 +4027,9 @@ namespace Google.Cloud.ApiHub.V1 {
           .AddMethod(__Method_GetExternalApi, serviceImpl.GetExternalApi)
           .AddMethod(__Method_UpdateExternalApi, serviceImpl.UpdateExternalApi)
           .AddMethod(__Method_DeleteExternalApi, serviceImpl.DeleteExternalApi)
-          .AddMethod(__Method_ListExternalApis, serviceImpl.ListExternalApis).Build();
+          .AddMethod(__Method_ListExternalApis, serviceImpl.ListExternalApis)
+          .AddMethod(__Method_RetrieveApiViews, serviceImpl.RetrieveApiViews)
+          .AddMethod(__Method_ConfigureAndDeployServer, serviceImpl.ConfigureAndDeployServer).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3728,6 +4052,7 @@ namespace Google.Cloud.ApiHub.V1 {
       serviceBinder.AddMethod(__Method_CreateSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreateSpecRequest, global::Google.Cloud.ApiHub.V1.Spec>(serviceImpl.CreateSpec));
       serviceBinder.AddMethod(__Method_GetSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetSpecRequest, global::Google.Cloud.ApiHub.V1.Spec>(serviceImpl.GetSpec));
       serviceBinder.AddMethod(__Method_GetSpecContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetSpecContentsRequest, global::Google.Cloud.ApiHub.V1.SpecContents>(serviceImpl.GetSpecContents));
+      serviceBinder.AddMethod(__Method_FetchAdditionalSpecContent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentRequest, global::Google.Cloud.ApiHub.V1.FetchAdditionalSpecContentResponse>(serviceImpl.FetchAdditionalSpecContent));
       serviceBinder.AddMethod(__Method_ListSpecs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListSpecsRequest, global::Google.Cloud.ApiHub.V1.ListSpecsResponse>(serviceImpl.ListSpecs));
       serviceBinder.AddMethod(__Method_UpdateSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdateSpecRequest, global::Google.Cloud.ApiHub.V1.Spec>(serviceImpl.UpdateSpec));
       serviceBinder.AddMethod(__Method_DeleteSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteSpecRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSpec));
@@ -3753,6 +4078,8 @@ namespace Google.Cloud.ApiHub.V1 {
       serviceBinder.AddMethod(__Method_UpdateExternalApi, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdateExternalApiRequest, global::Google.Cloud.ApiHub.V1.ExternalApi>(serviceImpl.UpdateExternalApi));
       serviceBinder.AddMethod(__Method_DeleteExternalApi, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteExternalApiRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteExternalApi));
       serviceBinder.AddMethod(__Method_ListExternalApis, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ListExternalApisRequest, global::Google.Cloud.ApiHub.V1.ListExternalApisResponse>(serviceImpl.ListExternalApis));
+      serviceBinder.AddMethod(__Method_RetrieveApiViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.RetrieveApiViewsRequest, global::Google.Cloud.ApiHub.V1.RetrieveApiViewsResponse>(serviceImpl.RetrieveApiViews));
+      serviceBinder.AddMethod(__Method_ConfigureAndDeployServer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.ConfigureAndDeployServerRequest, global::Google.LongRunning.Operation>(serviceImpl.ConfigureAndDeployServer));
     }
 
   }

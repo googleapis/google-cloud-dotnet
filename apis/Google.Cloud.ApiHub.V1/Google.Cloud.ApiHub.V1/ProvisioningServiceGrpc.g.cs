@@ -3,7 +3,7 @@
 //     source: google/cloud/apihub/v1/provisioning_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -74,6 +74,8 @@ namespace Google.Cloud.ApiHub.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.ApiHubInstance> __Marshaller_google_cloud_apihub_v1_ApiHubInstance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.ApiHubInstance.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest> __Marshaller_google_cloud_apihub_v1_UpdateApiHubInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest> __Marshaller_google_cloud_apihub_v1_LookupApiHubInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse> __Marshaller_google_cloud_apihub_v1_LookupApiHubInstanceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse.Parser));
@@ -101,6 +103,14 @@ namespace Google.Cloud.ApiHub.V1 {
         "GetApiHubInstance",
         __Marshaller_google_cloud_apihub_v1_GetApiHubInstanceRequest,
         __Marshaller_google_cloud_apihub_v1_ApiHubInstance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest, global::Google.LongRunning.Operation> __Method_UpdateApiHubInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateApiHubInstance",
+        __Marshaller_google_cloud_apihub_v1_UpdateApiHubInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse> __Method_LookupApiHubInstance = new grpc::Method<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse>(
@@ -134,6 +144,8 @@ namespace Google.Cloud.ApiHub.V1 {
 
       /// <summary>
       /// Deletes the API hub instance.
+      /// Deleting the API hub instance will also result in the removal of all
+      /// associated runtime project attachments and the host project registration.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -157,8 +169,30 @@ namespace Google.Cloud.ApiHub.V1 {
       }
 
       /// <summary>
-      /// Looks up an Api Hub instance in a given GCP project. There will always be
-      /// only one Api Hub instance for a GCP project across all locations.
+      /// Update an Api Hub instance. The following fields in the
+      /// [ApiHubInstance][google.cloud.apihub.v1.ApiHubInstance] can be updated:
+      ///
+      /// * [disable_search][ApiHubInstance.config.disable_search]
+      /// * [vertex_location][ApiHubInstance.config.vertex_location]
+      /// * [agent_registry_sync_config][ApiHubInstance.config.agent_registry_sync_config]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiHubInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateApiHubInstance(global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Looks up an Api Hub instance in a given Google Cloud project. There will
+      /// always be only one Api Hub instance for a Google Cloud project across all
+      /// locations.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -248,6 +282,8 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Deletes the API hub instance.
+      /// Deleting the API hub instance will also result in the removal of all
+      /// associated runtime project attachments and the host project registration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -261,6 +297,8 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Deletes the API hub instance.
+      /// Deleting the API hub instance will also result in the removal of all
+      /// associated runtime project attachments and the host project registration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -272,6 +310,8 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Deletes the API hub instance.
+      /// Deleting the API hub instance will also result in the removal of all
+      /// associated runtime project attachments and the host project registration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -285,6 +325,8 @@ namespace Google.Cloud.ApiHub.V1 {
       }
       /// <summary>
       /// Deletes the API hub instance.
+      /// Deleting the API hub instance will also result in the removal of all
+      /// associated runtime project attachments and the host project registration.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -343,8 +385,93 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApiHubInstance, null, options, request);
       }
       /// <summary>
-      /// Looks up an Api Hub instance in a given GCP project. There will always be
-      /// only one Api Hub instance for a GCP project across all locations.
+      /// Update an Api Hub instance. The following fields in the
+      /// [ApiHubInstance][google.cloud.apihub.v1.ApiHubInstance] can be updated:
+      ///
+      /// * [disable_search][ApiHubInstance.config.disable_search]
+      /// * [vertex_location][ApiHubInstance.config.vertex_location]
+      /// * [agent_registry_sync_config][ApiHubInstance.config.agent_registry_sync_config]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiHubInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateApiHubInstance(global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateApiHubInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an Api Hub instance. The following fields in the
+      /// [ApiHubInstance][google.cloud.apihub.v1.ApiHubInstance] can be updated:
+      ///
+      /// * [disable_search][ApiHubInstance.config.disable_search]
+      /// * [vertex_location][ApiHubInstance.config.vertex_location]
+      /// * [agent_registry_sync_config][ApiHubInstance.config.agent_registry_sync_config]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiHubInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateApiHubInstance(global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateApiHubInstance, null, options, request);
+      }
+      /// <summary>
+      /// Update an Api Hub instance. The following fields in the
+      /// [ApiHubInstance][google.cloud.apihub.v1.ApiHubInstance] can be updated:
+      ///
+      /// * [disable_search][ApiHubInstance.config.disable_search]
+      /// * [vertex_location][ApiHubInstance.config.vertex_location]
+      /// * [agent_registry_sync_config][ApiHubInstance.config.agent_registry_sync_config]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiHubInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiHubInstanceAsync(global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateApiHubInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an Api Hub instance. The following fields in the
+      /// [ApiHubInstance][google.cloud.apihub.v1.ApiHubInstance] can be updated:
+      ///
+      /// * [disable_search][ApiHubInstance.config.disable_search]
+      /// * [vertex_location][ApiHubInstance.config.vertex_location]
+      /// * [agent_registry_sync_config][ApiHubInstance.config.agent_registry_sync_config]
+      ///
+      /// The
+      /// [update_mask][google.cloud.apihub.v1.UpdateApiHubInstanceRequest.update_mask]
+      /// should be used to specify the fields being updated.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateApiHubInstanceAsync(global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateApiHubInstance, null, options, request);
+      }
+      /// <summary>
+      /// Looks up an Api Hub instance in a given Google Cloud project. There will
+      /// always be only one Api Hub instance for a Google Cloud project across all
+      /// locations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,8 +484,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return LookupApiHubInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up an Api Hub instance in a given GCP project. There will always be
-      /// only one Api Hub instance for a GCP project across all locations.
+      /// Looks up an Api Hub instance in a given Google Cloud project. There will
+      /// always be only one Api Hub instance for a Google Cloud project across all
+      /// locations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -369,8 +497,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_LookupApiHubInstance, null, options, request);
       }
       /// <summary>
-      /// Looks up an Api Hub instance in a given GCP project. There will always be
-      /// only one Api Hub instance for a GCP project across all locations.
+      /// Looks up an Api Hub instance in a given Google Cloud project. There will
+      /// always be only one Api Hub instance for a Google Cloud project across all
+      /// locations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -383,8 +512,9 @@ namespace Google.Cloud.ApiHub.V1 {
         return LookupApiHubInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up an Api Hub instance in a given GCP project. There will always be
-      /// only one Api Hub instance for a GCP project across all locations.
+      /// Looks up an Api Hub instance in a given Google Cloud project. There will
+      /// always be only one Api Hub instance for a Google Cloud project across all
+      /// locations.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -411,6 +541,7 @@ namespace Google.Cloud.ApiHub.V1 {
           .AddMethod(__Method_CreateApiHubInstance, serviceImpl.CreateApiHubInstance)
           .AddMethod(__Method_DeleteApiHubInstance, serviceImpl.DeleteApiHubInstance)
           .AddMethod(__Method_GetApiHubInstance, serviceImpl.GetApiHubInstance)
+          .AddMethod(__Method_UpdateApiHubInstance, serviceImpl.UpdateApiHubInstance)
           .AddMethod(__Method_LookupApiHubInstance, serviceImpl.LookupApiHubInstance).Build();
     }
 
@@ -424,6 +555,7 @@ namespace Google.Cloud.ApiHub.V1 {
       serviceBinder.AddMethod(__Method_CreateApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.CreateApiHubInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateApiHubInstance));
       serviceBinder.AddMethod(__Method_DeleteApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.DeleteApiHubInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteApiHubInstance));
       serviceBinder.AddMethod(__Method_GetApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.GetApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.ApiHubInstance>(serviceImpl.GetApiHubInstance));
+      serviceBinder.AddMethod(__Method_UpdateApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.UpdateApiHubInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateApiHubInstance));
       serviceBinder.AddMethod(__Method_LookupApiHubInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceRequest, global::Google.Cloud.ApiHub.V1.LookupApiHubInstanceResponse>(serviceImpl.LookupApiHubInstance));
     }
 
