@@ -122,12 +122,30 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("Data Source=projects/p1/instances/i1/databases/d1", null, null)]
         public void UniverseDomainEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
         {
-            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                EnvironmentVariableProvider = (key) => null
+            };
             var options = new SpannerClientCreationOptions(builder);
 
             // These tests are only to test the correct setting null or otherwise of UniverseDomain and Endpoint in the SpannerClientCreationOptions
             // For tests on setting the correct EffectiveEndpoint for the CallInvoker see ClientBuilderBase.EffectiveEndpoint tests in GAX
             Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
+            Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
+        }
+
+        [Theory]
+        [InlineData("Port=567", "env-domain.test", "spanner.env-domain.test:567")]
+        [InlineData("Port=567;UniverseDomain=test-domain.test", "env-domain.test", "spanner.test-domain.test:567")]
+        [InlineData("Port=567", "  ", "spanner.googleapis.com:567")]
+        public void PortWithoutHost_Endpoint(string connectionString, string environmentUniverseDomain, string expectedEndpoint)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                EnvironmentVariableProvider = key => key == "GOOGLE_CLOUD_UNIVERSE_DOMAIN" ? environmentUniverseDomain : null
+            };
+            var options = new SpannerClientCreationOptions(builder);
+
             Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
         }
 

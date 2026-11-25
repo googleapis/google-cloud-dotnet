@@ -98,7 +98,10 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void DefaultEndpointIfNotSpecified()
         {
-            var builder = new SpannerConnectionStringBuilder();
+            var builder = new SpannerConnectionStringBuilder()
+            {
+                EnvironmentVariableProvider = (key) => null,
+            };
             var bits = SpannerClient.DefaultEndpoint.Split(':');
             Assert.Equal(bits[0], builder.Host);
             Assert.Equal(int.Parse(bits[1]), builder.Port);
@@ -340,7 +343,10 @@ namespace Google.Cloud.Spanner.Data.Tests
         [Fact]
         public void Default_UniverseDomain()
         {
-            var builder = new SpannerConnectionStringBuilder();
+            var builder = new SpannerConnectionStringBuilder()
+            {
+                EnvironmentVariableProvider = (key) => null,
+            };
 
             Assert.Equal(SpannerConnectionStringBuilder.DefaultDomain, builder.UniverseDomain);
             Assert.Equal($"spanner.{SpannerConnectionStringBuilder.DefaultDomain}", builder.Host);
@@ -356,6 +362,20 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(universeDomain, builder.UniverseDomain);
             Assert.Equal($"spanner.{universeDomain}", builder.Host);
             Assert.Equal($"spanner.{universeDomain}:443", builder.EndPoint);
+        }
+
+        [Theory]
+        [InlineData("", "env-domain.test", "env-domain.test")]
+        [InlineData("", "  ", SpannerConnectionStringBuilder.DefaultDomain)]
+        [InlineData("UniverseDomain=test-domain.test", "env-domain.test", "test-domain.test")]
+        public void UniverseDomain_Default(string connectionString, string environmentUniverseDomain, string expectedUniverseDomain)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                EnvironmentVariableProvider = key => key == "GOOGLE_CLOUD_UNIVERSE_DOMAIN" ? environmentUniverseDomain : null
+            };
+
+            Assert.Equal(expectedUniverseDomain, builder.UniverseDomain);
         }
 
         [Fact]

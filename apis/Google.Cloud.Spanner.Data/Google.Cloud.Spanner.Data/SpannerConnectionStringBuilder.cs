@@ -61,6 +61,7 @@ namespace Google.Cloud.Spanner.Data
         private const string DatabaseRoleKeyword = "DatabaseRole";
         private const string IsolationLevelKeyword = "IsolationLevel";
         private const string EnableLeaderRoutingKeyword = "EnableLeaderRouting";
+        private const string UniverseDomainEnvironmentVariable = "GOOGLE_CLOUD_UNIVERSE_DOMAIN";
 
         private InstanceName _instanceName;
         private DatabaseName _databaseName;
@@ -294,7 +295,9 @@ namespace Google.Cloud.Spanner.Data
         }
 
         /// <summary>
-        /// The universe domain to connect to, or null to use the default universe domain <see cref="DefaultDomain"/>.
+        /// The universe domain to connect to. If this is not set in the connection string, the value of the
+        /// <c>GOOGLE_CLOUD_UNIVERSE_DOMAIN</c> environment variable is used if it is set to a non-whitespace value;
+        /// otherwise the default universe domain "googleapis.com" is used.
         /// </summary>
         /// <remarks>
         /// <para>
@@ -303,14 +306,19 @@ namespace Google.Cloud.Spanner.Data
         /// </para>
         /// <para>
         /// If default credentials or one of <see cref="GoogleCredential"/> or <see cref="CredentialFile"/>
-        /// is used, <see cref="GoogleCredential.GetUniverseDomain"/> should be:
-        /// The same as <see cref="UniverseDomain"/> if <see cref="UniverseDomain"/> has been set otherwise should be same as <see cref="DefaultDomain"/>
+        /// is used, <see cref="GoogleCredential.GetUniverseDomain"/> should be the same as <see cref="UniverseDomain"/>.
         /// </para>
         /// </remarks>
         public string UniverseDomain
         {
-            get => GetValueOrDefault(nameof(UniverseDomain), DefaultDomain);
+            get => GetValueOrDefault(nameof(UniverseDomain), GetDefaultUniverseDomain());
             set => this[nameof(UniverseDomain)] = value;
+        }
+
+        private string GetDefaultUniverseDomain()
+        {
+            var value = (EnvironmentVariableProvider ?? Environment.GetEnvironmentVariable)(UniverseDomainEnvironmentVariable);
+            return string.IsNullOrWhiteSpace(value) ? DefaultDomain : value;
         }
 
         /// <summary>
