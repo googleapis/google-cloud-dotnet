@@ -15,6 +15,7 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ClientTesting;
 using Grpc.Auth;
+using Grpc.Core;
 using System;
 using System.IO;
 using System.Linq;
@@ -118,17 +119,60 @@ namespace Google.Cloud.Spanner.Data.Tests
         [InlineData("Host=test-host;Port=567", null, "test-host:567")]
         [InlineData("Host=test-host", null, "test-host:443")]
         [InlineData("Port=567", null, "spanner.googleapis.com:567")]
-        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test", null, "test-host:567")]
+        [InlineData("Host=test-host;Port=567;UniverseDomain=test-domain.test", "test-domain.test", "test-host:567")]
+        [InlineData("Port=567;UniverseDomain=test-domain.test", "test-domain.test", "spanner.test-domain.test:567")]
         [InlineData("Data Source=projects/p1/instances/i1/databases/d1", null, null)]
         public void UniverseDomainEndpoint(string connectionString, string expectedUniverseDomain, string expectedEndpoint)
         {
-            var builder = new SpannerConnectionStringBuilder(connectionString);
+            var builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                EnvironmentVariableProvider = (key) => null
+            };
             var options = new SpannerClientCreationOptions(builder);
 
             // These tests are only to test the correct setting null or otherwise of UniverseDomain and Endpoint in the SpannerClientCreationOptions
             // For tests on setting the correct EffectiveEndpoint for the CallInvoker see ClientBuilderBase.EffectiveEndpoint tests in GAX
             Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
             Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
+        }
+
+        [Theory]
+        [InlineData("Port=567", "env-domain.test", "spanner.env-domain.test:567")]
+        [InlineData("Port=567;UniverseDomain=test-domain.test", "env-domain.test", "spanner.test-domain.test:567")]
+        [InlineData("Port=567", "  ", "spanner.googleapis.com:567")]
+        public void PortWithoutHost_Endpoint(string connectionString, string environmentUniverseDomain, string expectedEndpoint)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString)
+            {
+                EnvironmentVariableProvider = key => key == "GOOGLE_CLOUD_UNIVERSE_DOMAIN" ? environmentUniverseDomain : null
+            };
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.Equal(expectedEndpoint, options.ClientBuilder.Endpoint);
+        }
+
+        [Theory]
+        [InlineData("Host=test-host;UniverseDomain=test-domain.test", null)]
+        [InlineData("Port=567;UniverseDomain=test-domain.test", null)]
+        [InlineData("UniverseDomain=test-domain.test", "test-domain.test")]
+        public void UniverseDomain_CredentialOverride(string connectionString, string expectedUniverseDomain)
+        {
+            var builder = new SpannerConnectionStringBuilder(connectionString, ChannelCredentials.Insecure)
+            {
+                EnvironmentVariableProvider = key => null
+            };
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.Equal(expectedUniverseDomain, options.ClientBuilder.UniverseDomain);
+        }
+
+        [Fact]
+        public async Task CreateSpannerClientAsync_CredentialOverrideWithEndpointAndUniverseDomain_DoesNotThrow()
+        {
+            var builder = new SpannerConnectionStringBuilder("Host=test-host;UniverseDomain=test-domain.test", ChannelCredentials.Insecure);
+            var options = new SpannerClientCreationOptions(builder);
+
+            Assert.NotNull(await options.CreateSpannerClientAsync(new Spanner.V1.SpannerSettings()));
         }
 
         // Credential tests moved from the previous SpannerConnectionStringBuilder tests
