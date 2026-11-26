@@ -1225,9 +1225,16 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         protected override void Dispose(bool disposing)
         {
-            if (IsOpen)
+            try
             {
-                Close();
+                if (disposing && IsOpen)
+                {
+                    Close();
+                }
+            }
+            finally
+            {
+                base.Dispose(disposing);
             }
         }
     }
