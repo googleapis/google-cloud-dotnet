@@ -53,7 +53,11 @@ namespace Google.Cloud.Spanner.Data
                 DirectedReadOptions = builder.DirectedReadOptions,
             };
 
-            clientBuilder.UniverseDomain = clientBuilder.Endpoint is null && builder.ContainsKey(nameof(builder.UniverseDomain)) ? builder.UniverseDomain : null;
+            clientBuilder.UniverseDomain =
+                (clientBuilder.Endpoint is null || clientBuilder.ChannelCredentials is null) &&
+                builder.ContainsKey(nameof(builder.UniverseDomain))
+                    ? builder.UniverseDomain
+                    : null;
 
             var emulatorBuilder = clientBuilder.MaybeCreateEmulatorClientBuilder();
 
