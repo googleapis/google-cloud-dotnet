@@ -452,6 +452,16 @@ namespace Google.Cloud.Spanner.Data
         /// <inheritdoc />
         public override void Prepare()
         {
+            var connection = SpannerConnection;
+            if (connection == null)
+            {
+                throw new InvalidOperationException("The Connection property has not been set.");
+            }
+            if (connection.State != ConnectionState.Open)
+            {
+                throw new InvalidOperationException("The connection is not open.");
+            }
+
             //Spanner does not support preoptimized queries nor 2 phase commit transactions.
         }
 
