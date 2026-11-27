@@ -5076,6 +5076,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1/Google.Cloud.SaasPlatform.SaasServiceMgmt.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.AgentRegistryEndpoint.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/agentregistryendpoint/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.AgentRegistryEndpoint.V1/Google.Cloud.AgentRegistryEndpoint.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
