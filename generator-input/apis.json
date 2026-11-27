@@ -329,6 +329,25 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.AgentRegistryEndpoint.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Agent Registry Endpoint",
+      "productUrl": "https://docs.cloud.google.com/agent-registry/reference/agentregistryendpoint/rest",
+      "description": "Agent Registry Endpoint is the localized dataplane API for Agent Registry.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.AgentRegistry.V1": "1.0.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/agentregistryendpoint/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "agentregistryendpoint",
+      "serviceConfigFile": "agentregistryendpoint_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.AlloyDb.V1",
       "version": "1.16.0",
       "type": "grpc",
