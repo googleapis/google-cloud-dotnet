@@ -473,6 +473,7 @@
       "transport": "grpc+rest",
       "restNumericEnums": true,
       "projects": [
+        "IntegrationTests",
         "Tests"
       ]
     },
